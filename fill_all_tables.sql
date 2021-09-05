@@ -13,12 +13,12 @@ VALUES
 (1234567818, 'Мишина', 'Татьяна', 'Ярославовична', TO_DATE('20.05.2000', 'DD.MM.YYYY')),
 (1234567819, 'Каськив', 'Зигмунд', 'Виталиевич', TO_DATE('21.07.2002', 'DD.MM.YYYY')),
 (1234567820, 'Мишин', 'Шамиль', 'Станиславович', TO_DATE('09.08.1986', 'DD.MM.YYYY')),
-(1234567821, 'Бобров', 'Макар', 'Анатолиевич', TO_DATE('07.12.2008', 'DD.MM.YYYY'))
+(1234567821, 'Бобров', 'Макар', 'Анатолиевич', TO_DATE('07.12.2008', 'DD.MM.YYYY'));
 
 INSERT INTO public."Cities" (city_name)
 VALUES
 ('Вологда'),
-('Череповец')
+('Череповец');
 
 INSERT INTO public."Streets" (street_name, city_link)
 VALUES
@@ -31,7 +31,7 @@ VALUES
 ('ул. Жукова', 2),
 ('ул. Гоголя', 2),
 ('ул. Крайняя', 2),
-('ул. Гагарина', 2)
+('ул. Гагарина', 2);
 
 INSERT INTO public."Houses" (house_number, street_link)
 VALUES
@@ -64,7 +64,7 @@ VALUES
 ('44', 9),
 ('45', 9),
 ('48А', 10),
-('48Б', 10)
+('48Б', 10);
 
 
 INSERT INTO public."Flats" (flat_number, house_link)
@@ -129,7 +129,7 @@ VALUES
 (58, 29), 
 (59, 29), 
 (60, 30), 
-(61, 30)
+(61, 30);
 
 INSERT INTO public."Residents" (human_link, flat_link)
 VALUES
@@ -144,7 +144,7 @@ VALUES
 (1234567817, 42),
 (1234567818, 42),
 (1234567820, 42),
-(1234567821, 50)
+(1234567821, 50);
 
 INSERT INTO public."Flats_owners" (human_link, flat_link)
 VALUES
@@ -154,4 +154,4 @@ VALUES
 (1234567813, 7),
 (1234567815, 40),
 (1234567816, 41),
-(1234567821, 50)
+(1234567821, 50);
