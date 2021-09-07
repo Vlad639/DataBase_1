@@ -1,3 +1,10 @@
-SELECT public."Humans".* FROM public."Humans", public."Residents", public."Houses", public."Flats"
-WHERE 
-	passport_number = human_link AND (flat_link = flat_id) AND (house_link = house_id) AND house_id = 2
+SELECT 
+	public."Humans".*
+FROM 
+	public."Humans" 
+	
+	JOIN public."Flats"
+	ON house_link = 3
+	
+	JOIN public."Residents"
+	ON flat_link = flat_id AND human_link = human_id;

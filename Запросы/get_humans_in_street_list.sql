@@ -1,7 +1,14 @@
-SELECT public."Humans".* FROM public."Humans", public."Residents", public."Streets", public."Houses", public."Flats"
-WHERE
-	passport_number = human_link AND 
-	flat_link = flat_id AND 
-	house_link = house_id AND 
-	street_link = street_id AND
-	street_id IN (7, 9)
+SELECT 
+	public."Humans".* 
+FROM 
+	public."Humans"
+	
+	JOIN public."Houses"
+	ON street_link in (1, 9)
+	
+	JOIN public."Flats"
+	ON house_link = house_id
+	
+	JOIN public."Residents"
+	ON flat_link = flat_id AND human_link = human_id;
+
