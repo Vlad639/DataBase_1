@@ -1,3 +1,6 @@
-SELECT public."Humans".* FROM public."Humans", public."Flats_owners"
-WHERE 
-	passport_number = human_link AND flat_link = 2;
+SELECT 
+	public."Humans".* 
+FROM 
+	public."Humans"
+	JOIN public."Flats_owners"
+	ON human_id = human_link AND flat_link = 2;
