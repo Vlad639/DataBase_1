@@ -149,7 +149,6 @@ VALUES
 INSERT INTO public."Flats_owners" (human_link, flat_link)
 VALUES
 (1, 1),
-(1, 1),
 (3, 2),
 (4, 7),
 (5, 40),
