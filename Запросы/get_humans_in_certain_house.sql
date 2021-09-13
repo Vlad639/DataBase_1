@@ -1,10 +1,12 @@
 SELECT 
 	public."Humans".*
 FROM 
-	public."Humans" 
-	
-	JOIN public."Flats"
-	ON house_link = 3
+	public."Flats" 
 	
 	JOIN public."Residents"
-	ON flat_link = flat_id AND human_link = human_id;
+	ON flat_link = flat_id
+	
+	JOIN public."Humans"
+	ON human_link = human_id
+	
+	WHERE house_link = 3;

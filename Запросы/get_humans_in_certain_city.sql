@@ -1,10 +1,7 @@
 SELECT 
-	public."Humans".* 
+	public."Humans".*
 FROM 
-	public."Humans"
-	
-	JOIN public."Streets"
-	ON city_link = 1
+	public."Streets"
 	
 	JOIN public."Houses"
 	ON street_link = street_id
@@ -13,5 +10,9 @@ FROM
 	ON house_link = house_id
 	
 	JOIN public."Residents"
-	ON flat_link = flat_id AND human_link = human_id;
-
+	ON flat_link = flat_id
+	
+	JOIN public."Humans"
+	ON human_link = human_id
+	
+	WHERE city_link = 1;

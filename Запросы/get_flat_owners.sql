@@ -4,6 +4,8 @@ FROM
 	public."Humans"
 	
 	JOIN public."Flats_owners"
-	ON human_link = human_id AND flat_link = 40;
+	ON human_link = human_id 
+WHERE
+	flat_link = 40;
 	
 
